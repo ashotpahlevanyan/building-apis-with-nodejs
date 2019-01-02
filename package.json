@@ -20,6 +20,8 @@
     "babel-preset-es2015": "^6.5.0",
     "consign": "^0.1.6",
     "express": "^4.16.4",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "sequelize": "^4.42.0",
+    "sqlite3": "^4.0.4"
   }
 }
