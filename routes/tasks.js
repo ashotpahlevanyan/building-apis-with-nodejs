@@ -7,7 +7,7 @@ module.exports = app => {
 		    	res.status(412).json({msg: error.message});
 		    });
 		})
-		.post((req, res) => {
+		.post("/tasks", (req, res) => {
 			Tasks.create(req.body)
 				.then(result => res.json(result))
 				.catch(error => {
@@ -28,14 +28,14 @@ module.exports = app => {
 					res.status(412).json({msg: error.message});
 				});
 		})
-		.put((req, res) => {
+		.put("/tasks/:id", (req, res) => {
 			Tasks.update(req.body, {where: req.params})
 				.then(result => res.sendStatus(204))
 				.catch(error => {
 					res.status(412).json({msg: error.message});
 				});
 		})
-		.delete((req, res) => {
+		.delete("/tasks/:id", (req, res) => {
 			Tasks.destroy({where: req.params})
 				.then(result => res.sendStatus(204))
 				.catch(error => {
