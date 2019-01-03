@@ -1,12 +1,12 @@
-import express from 'express';
-import consign from 'consign';
+import express from "express";
+import consign from "consign";
 
 const app = express();
 
 consign()
-	.include('db.js')
-	.then("models")
+	.include("libs/config.js")
+	.then("db.js")
 	.then("libs/middlewares.js")
 	.then("routes")
-	.then('libs/boot.js')
+	.then("libs/boot.js")
 	.into(app);
