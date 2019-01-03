@@ -7,6 +7,8 @@ module.exports = app => {
   app.set("json spaces", SPACES);
 
 	app.use(bodyParser.json());
+	app.use(app.auth.initialize());
+
 	app.use((req, res, next) => {
 		delete req.body.id;
 		next();
