@@ -1,22 +1,21 @@
 module.exports = app => {
 	const Users = app.db.models.Users;
-
-	app.get("/users/:id", (req, res) => {
-		Users.findById(req.params.id, {
-			attributes: ["id", "name", "email"]
+	app.all("/user", app.auth.authenticate())
+		.get("/user", (req, res) => {
+			Users.findById(req.user.id, {
+				attributes: ["id", "name", "email"]
+			})
+				.then(result => res.json(result))
+				.catch(error => {
+					res.status(412).json({msg: error.message});
+				});
 		})
-			.then(result => res.json(result))
-			.catch(error => {
-				res.status(412).json({msg: error.message});
-			});
-	});
-
-	app.delete("/users/:id", (req, res) => {
-		Users.destroy({where: {id: req.params.id}})
-			.then(result => res.json(result))
-			.catch(error => {
-				res.status(412).json({msg: error.message});
-			});
+		.delete("/user", (req, res) => {
+			Users.destroy({where: {id: req.user.id}})
+				.then(result => res.json(result))
+				.catch(error => {
+					res.status(412).json({msg: error.message});
+				});
 	});
 
 	app.post("/users", (req, res) => {
