@@ -7,14 +7,14 @@ module.exports = (sequelize, DataType) => {
 				autoIncrement: true
 			},
 			title: {
-				type: DataType.String,
+				type: DataType.STRING,
 				allowNull: false,
 				validate: {
 					notEmpty: true
 				}
 			},
 			done: {
-				type: DataType.Boolean,
+				type: DataType.BOOLEAN,
 				allowNull: false,
 				defaultValue: false
 			}
