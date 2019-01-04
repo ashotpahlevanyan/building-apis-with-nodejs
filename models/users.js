@@ -14,6 +14,13 @@ module.exports = (sequelize, DataType) => {
         notEmpty: true
       }
     },
+    password: {
+      type: DataType.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true
+      }
+    },
     email: {
       type: DataType.STRING,
       unique: true,
@@ -28,13 +35,14 @@ module.exports = (sequelize, DataType) => {
         Users.hasMany(models.Tasks);
       },
 	    isPassword: (encodedPassword, password) => {
-	    	return bcrypt.compareSync(password, encodedPassword);
+	    	return bcrypt.compareSync(encodedPassword, password);
 	    }
     }
   });
 
 	Users.hook('beforeCreate', (user, options) => {
 		const salt = bcrypt.genSaltSync();
+		console.log("salt", salt);
 		user.password = bcrypt.hashSync(user.password, salt);
 	});
 
