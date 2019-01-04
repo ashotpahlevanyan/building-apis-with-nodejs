@@ -1,5 +1,6 @@
 module.exports = app => {
 	const Users = app.db.models.Users;
+
 	app.all("/user", app.auth.authenticate())
 		.get("/user", (req, res) => {
 			Users.findById(req.user.id, {
@@ -12,7 +13,7 @@ module.exports = app => {
 		})
 		.delete("/user", (req, res) => {
 			Users.destroy({where: {id: req.user.id}})
-				.then(result => res.json(result))
+				.then(result => res.sendStatus(204))
 				.catch(error => {
 					res.status(412).json({msg: error.message});
 				});

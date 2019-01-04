@@ -17,7 +17,7 @@ module.exports = app => {
 				});
 	  });
 
-	app.all(app.auth.authenticate())
+	app.all("/tasks/:id", app.auth.authenticate())
 		.get("/tasks/:id", (req, res) => {
 			Tasks.findOne({where: {
 				id: req.params.id,

@@ -31,13 +31,12 @@ module.exports = (sequelize, DataType) => {
 	    	return bcrypt.compareSync(password, encodedPassword);
 	    }
     }
-  }, {
-	  hooks: {
-		  beforeCreate: user => {
-			  const salt = bcrypt.genSaltSync();
-			  user.password = bcrypt.hashSync(user.password, salt);
-		  }
-	  }
   });
+
+	Users.hook('beforeCreate', (user, options) => {
+		const salt = bcrypt.genSaltSync();
+		user.password = bcrypt.hashSync(user.password, salt);
+	});
+
   return Users;
 };
