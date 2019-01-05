@@ -101,7 +101,7 @@ describe("Routes: Tasks", () => {
 			});
 		});
 	});
-	describe("DETELE /tasks/:id", () => {
+	describe("DELETE /tasks/:id", () => {
 		describe("status 204", () => {
 			it("removes a task", done => {
 				request.delete(`/tasks/${fakeTask.id}`)
