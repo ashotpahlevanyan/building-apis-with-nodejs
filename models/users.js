@@ -28,25 +28,30 @@ module.exports = (sequelize, DataType) => {
       validate: {
         notEmpty: true
       }
-    }
+    },
+	  salt: {
+			type: DataType.STRING,
+				validate: {
+				notEmpty: true
+			}
+		}
   }, {
     classMethods: {
       associate: (models) => {
         Users.hasMany(models.Tasks);
       },
-	    isPassword: (encodedPassword, password) => {
-	    	console.log(encodedPassword, password);
-	    	const res = bcrypt.compareSync(encodedPassword, password);
-		    console.log(res);
-		    return res;
+	    isPassword: (encodedPassword, password, salt) => {
+	    	//console.log(encodedPassword, password, salt);
+		    const testPassword = bcrypt.hashSync(password, salt);
+		    return testPassword === encodedPassword;
 	    }
     }
   });
 
 	Users.hook('beforeCreate', (user, options) => {
 		const salt = bcrypt.genSaltSync();
-		//console.log("salt", salt);
 		user.password = bcrypt.hashSync(user.password, salt);
+		user.salt = salt;
 	});
 
   return Users;

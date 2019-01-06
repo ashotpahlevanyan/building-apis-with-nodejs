@@ -7,10 +7,11 @@ module.exports = app => {
 		if(req.body.email && req.body.password) {
 			const email = req.body.email;
 			const password = req.body.password;
-			console.log(email, password);
+			//console.log(email, password);
 			Users.findOne({where: {email: email}})
 				.then(user => {
-					if(Users.isPassword(user.password, password)) {
+					//console.log(user);
+					if(Users.isPassword(user.password, password, user.salt)) {
 						const payload = {id: user.id};
 						res.json({
 							token: jwt.encode(payload, cfg.jwtSecret)
