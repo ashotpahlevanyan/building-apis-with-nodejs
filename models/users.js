@@ -35,14 +35,17 @@ module.exports = (sequelize, DataType) => {
         Users.hasMany(models.Tasks);
       },
 	    isPassword: (encodedPassword, password) => {
-	    	return bcrypt.compareSync(encodedPassword, password);
+	    	console.log(encodedPassword, password);
+	    	const res = bcrypt.compareSync(encodedPassword, password);
+		    console.log(res);
+		    return res;
 	    }
     }
   });
 
 	Users.hook('beforeCreate', (user, options) => {
 		const salt = bcrypt.genSaltSync();
-		console.log("salt", salt);
+		//console.log("salt", salt);
 		user.password = bcrypt.hashSync(user.password, salt);
 	});
 
