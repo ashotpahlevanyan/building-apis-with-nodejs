@@ -218,3 +218,639 @@
 {"message":"::ffff:127.0.0.1 - - [08/Jan/2019:07:47:46 +0000] \"GET /user HTTP/1.1\" 200 66\n","level":"info"}
 {"message":"::ffff:127.0.0.1 - - [08/Jan/2019:07:47:46 +0000] \"DELETE /user HTTP/1.1\" 204 -\n","level":"info"}
 {"message":"::ffff:127.0.0.1 - - [08/Jan/2019:07:47:46 +0000] \"POST /users HTTP/1.1\" 200 283\n","level":"info"}
+{"message":"[Tue Jan 08 2019 13:48:13 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;","level":"info"}
+{"message":"[Tue Jan 08 2019 13:48:13 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Users`","level":"info"}
+{"message":"[Tue Jan 08 2019 13:48:13 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT false, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;","level":"info"}
+{"message":"[Tue Jan 08 2019 13:48:13 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Tasks`","level":"info"}
+{"message":"fe80::1 - - [08/Jan/2019:09:48:57 +0000] \"GET / HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"fe80::1 - - [08/Jan/2019:09:49:36 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"fe80::1 - - [08/Jan/2019:09:49:40 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"fe80::1 - - [08/Jan/2019:09:50:33 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"fe80::1 - - [08/Jan/2019:09:50:39 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:09:52:46 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:09:52:50 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Tue Jan 08 2019 13:53:27 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;","level":"info"}
+{"message":"[Tue Jan 08 2019 13:53:27 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Users`","level":"info"}
+{"message":"[Tue Jan 08 2019 13:53:27 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT false, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;","level":"info"}
+{"message":"[Tue Jan 08 2019 13:53:27 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Tasks`","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:09:53:36 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Tue Jan 08 2019 13:58:05 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;","level":"info"}
+{"message":"[Tue Jan 08 2019 13:58:05 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Users`","level":"info"}
+{"message":"[Tue Jan 08 2019 13:58:05 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT false, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;","level":"info"}
+{"message":"[Tue Jan 08 2019 13:58:05 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Tasks`","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:09:58:24 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:11:14:38 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:12:45:25 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:12:45:37 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:12:47:53 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:00:04 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:09:25 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Users` (`id`,`name`,`password`,`email`,`salt`,`created_at`,`updated_at`) VALUES (DEFAULT,'Ashodt','$2b$10$vyuiEu5zUpZY8Mn1aTIiYOj0FTCvtD9n.ukb5WDMcaN55gcOhmka.','ashotdd@gmail.com','$2b$10$vyuiEu5zUpZY8Mn1aTIiYO','2019-01-08 14:09:25','2019-01-08 14:09:25');","level":"info"}
+{"message":"::1 - - [08/Jan/2019:14:09:25 +0000] \"POST /users HTTP/1.1\" 200 288\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:09:41 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;","level":"info"}
+{"message":"[Tue Jan 08 2019 18:09:41 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Users`","level":"info"}
+{"message":"[Tue Jan 08 2019 18:09:41 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT false, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;","level":"info"}
+{"message":"[Tue Jan 08 2019 18:09:41 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Tasks`","level":"info"}
+{"message":"[Tue Jan 08 2019 18:10:01 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Users` (`id`,`name`,`password`,`email`,`salt`,`created_at`,`updated_at`) VALUES (DEFAULT,'Ashodt','$2b$10$SOY5G9JFXyUPZ7VmydArn.P29wlnifVPQkzNXpSSUIAvT/kGUAoqC','ashotdd@gmail.com','$2b$10$SOY5G9JFXyUPZ7VmydArn.','2019-01-08 14:10:01','2019-01-08 14:10:01');","level":"info"}
+{"message":"::1 - - [08/Jan/2019:14:10:01 +0000] \"POST /users HTTP/1.1\" 412 33\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:29:44 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL);","level":"info"}
+{"message":"[Tue Jan 08 2019 18:29:44 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_LIST(`Users`)","level":"info"}
+{"message":"[Tue Jan 08 2019 18:29:44 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)","level":"info"}
+{"message":"[Tue Jan 08 2019 18:29:44 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT 0, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE);","level":"info"}
+{"message":"[Tue Jan 08 2019 18:29:44 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_LIST(`Tasks`)","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:55 +0000] \"GET / HTTP/1.1\" 200 29\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:56 +0000] \"GET /tasks HTTP/1.1\" 200 403\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:56 +0000] \"POST /tasks HTTP/1.1\" 200 165\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:56 +0000] \"GET /tasks/1 HTTP/1.1\" 200 166\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:56 +0000] \"GET /tasks/0 HTTP/1.1\" 404 9\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:56 +0000] \"PUT /tasks/1 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:56 +0000] \"DELETE /tasks/1 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:56 +0000] \"POST /token HTTP/1.1\" 200 112\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:56 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:56 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:56 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:57 +0000] \"GET /user HTTP/1.1\" 200 66\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:57 +0000] \"DELETE /user HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:29:57 +0000] \"POST /users HTTP/1.1\" 200 283\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:30:12 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL);","level":"info"}
+{"message":"[Tue Jan 08 2019 18:30:12 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_LIST(`Users`)","level":"info"}
+{"message":"[Tue Jan 08 2019 18:30:12 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)","level":"info"}
+{"message":"[Tue Jan 08 2019 18:30:12 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT 0, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE);","level":"info"}
+{"message":"[Tue Jan 08 2019 18:30:12 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_LIST(`Tasks`)","level":"info"}
+{"message":"fe80::1 - - [08/Jan/2019:14:31:21 +0000] \"GET / HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:31:41 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL);","level":"info"}
+{"message":"[Tue Jan 08 2019 18:31:41 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_LIST(`Users`)","level":"info"}
+{"message":"[Tue Jan 08 2019 18:31:41 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)","level":"info"}
+{"message":"[Tue Jan 08 2019 18:31:41 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT 0, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE);","level":"info"}
+{"message":"[Tue Jan 08 2019 18:31:41 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_LIST(`Tasks`)","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:32:05 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"::1 - - [08/Jan/2019:14:38:13 +0000] \"GET / HTTP/1.1\" 200 29\n","level":"info"}
+{"message":"::1 - - [08/Jan/2019:14:38:14 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:46:26 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL);","level":"info"}
+{"message":"[Tue Jan 08 2019 18:46:26 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_LIST(`Users`)","level":"info"}
+{"message":"[Tue Jan 08 2019 18:46:26 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)","level":"info"}
+{"message":"[Tue Jan 08 2019 18:46:26 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT 0, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE);","level":"info"}
+{"message":"[Tue Jan 08 2019 18:46:26 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_LIST(`Tasks`)","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:46:40 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:46:40 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Users` (`id`,`name`,`password`,`email`,`salt`,`created_at`,`updated_at`) VALUES (NULL,'ashot','$2b$10$uD.qdlj9sxDLveuRZod6hOhIu5QnY0cMl1k23P.2vMvIVoXtB0fMW','ashot@gmail.com','$2b$10$uD.qdlj9sxDLveuRZod6hO','2019-01-08 14:46:40.655 +00:00','2019-01-08 14:46:40.655 +00:00');","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:46:40 +0000] \"POST /users HTTP/1.1\" 200 285\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:46:45 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:46:45 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:46:48 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:46:48 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:47:01 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:47:01 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 'ashot@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:47:01 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:52:18 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL);","level":"info"}
+{"message":"[Tue Jan 08 2019 18:52:18 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_LIST(`Users`)","level":"info"}
+{"message":"[Tue Jan 08 2019 18:52:18 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)","level":"info"}
+{"message":"[Tue Jan 08 2019 18:52:18 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT 0, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE);","level":"info"}
+{"message":"[Tue Jan 08 2019 18:52:18 GMT+0400 (Armenia Standard Time)] Executing (default): PRAGMA INDEX_LIST(`Tasks`)","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:53:03 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:53:03 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Users` (`id`,`name`,`password`,`email`,`salt`,`created_at`,`updated_at`) VALUES (NULL,'Ashot','$2b$10$G3ysT..y6Q/zANWw9cbW4uZ1MIJVfyy1k5hZESHIWQ/NxE/WpO/Ve','ashot@gmail.com','$2b$10$G3ysT..y6Q/zANWw9cbW4u','2019-01-08 14:53:03.784 +00:00','2019-01-08 14:53:03.784 +00:00');","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:53:03 +0000] \"POST /users HTTP/1.1\" 200 285\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:53:15 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:53:15 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 'ashot@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:53:15 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:55:19 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:55:19 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Users` (`id`,`name`,`password`,`email`,`salt`,`created_at`,`updated_at`) VALUES (NULL,'Ashot','$2b$10$Y2UCexl08lJaOav.8RLQn.KvUTtgMfteuk.vbPZggmI0OvgfGQrPW','ashot@gmails.com','$2b$10$Y2UCexl08lJaOav.8RLQn.','2019-01-08 14:55:19.490 +00:00','2019-01-08 14:55:19.490 +00:00');","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:55:19 +0000] \"POST /users HTTP/1.1\" 200 286\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:55:29 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:55:29 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 'ashot@gmails.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:55:29 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:56:31 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;","level":"info"}
+{"message":"[Tue Jan 08 2019 18:56:31 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Users`","level":"info"}
+{"message":"[Tue Jan 08 2019 18:56:31 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT false, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;","level":"info"}
+{"message":"[Tue Jan 08 2019 18:56:31 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Tasks`","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:56:51 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:56:51 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Users` (`id`,`name`,`password`,`email`,`salt`,`created_at`,`updated_at`) VALUES (DEFAULT,'Ashot Pahlevanyan','$2b$10$N3S1EodzO2VF2a.vV.8W5ur6bNWYYL45I0kKDtZ65f9A9l3OziOvO','ashot@gmails.com','$2b$10$N3S1EodzO2VF2a.vV.8W5u','2019-01-08 14:56:51','2019-01-08 14:56:51');","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:56:51 +0000] \"POST /users HTTP/1.1\" 200 298\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:57:00 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Tue Jan 08 2019 18:57:00 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 'ashot@gmails.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:14:57:00 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:05:20 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:05:20 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Users`","level":"info"}
+{"message":"[Wed Jan 09 2019 01:05:20 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT false, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:05:20 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Tasks`","level":"info"}
+{"message":"fe80::1 - - [08/Jan/2019:21:05:28 +0000] \"GET / HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"fe80::1 - - [08/Jan/2019:21:05:41 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:05:41 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 'ashot@gmails.com';","level":"info"}
+{"message":"fe80::1 - - [08/Jan/2019:21:05:41 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:06:00 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:06:00 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Users` (`id`,`name`,`password`,`email`,`salt`,`created_at`,`updated_at`) VALUES (DEFAULT,'as','$2b$10$dSTCyIQprCEBpT1NqAuwZ.poDBXXsKBqiYLAXCIVrD/YR19JSeSKu','as@gm.com','$2b$10$dSTCyIQprCEBpT1NqAuwZ.','2019-01-08 21:06:00','2019-01-08 21:06:00');","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:06:00 +0000] \"POST /users HTTP/1.1\" 200 276\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:06:19 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:06:19 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 'as@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:06:19 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:06:42 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:06:42 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Users` (`id`,`name`,`password`,`email`,`salt`,`created_at`,`updated_at`) VALUES (DEFAULT,'asdfg','$2b$10$DZWH/FmyXNC5FoL/7YFTh.rdJLdU/FK8jIBVYF0sx0yKADc2WByU2','as@gg.com','$2b$10$DZWH/FmyXNC5FoL/7YFTh.','2019-01-08 21:06:42','2019-01-08 21:06:42');","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:06:42 +0000] \"POST /users HTTP/1.1\" 200 279\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:11:38 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:11:38 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Users`","level":"info"}
+{"message":"[Wed Jan 09 2019 01:11:38 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT false, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:11:38 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Tasks`","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:12:09 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:12:09 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Users` (`id`,`name`,`password`,`email`,`salt`,`created_at`,`updated_at`) VALUES (DEFAULT,'re','$2b$10$Cw94zBEVxng0xY56IwtxpuVimLjEFKfiz03tGzbU9Bj5bE8t.9EMu','re@gmail.com','$2b$10$Cw94zBEVxng0xY56Iwtxpu','2019-01-08 21:12:09','2019-01-08 21:12:09');","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:12:09 +0000] \"POST /users HTTP/1.1\" 200 279\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:12:19 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:12:19 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:12:19 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:14:33 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:14:33 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Users`","level":"info"}
+{"message":"[Wed Jan 09 2019 01:14:33 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT false, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:14:33 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Tasks`","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:14:52 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:14:52 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:14:52 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:14:53 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:14:53 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:14:53 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:14:53 +0000] \"GET /tasks HTTP/1.1\" 200 2\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:16:20 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:16:20 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:16:20 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:16:21 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:16:21 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:16:21 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:16:21 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:16:50 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:16:50 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:16:50 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:16:51 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:16:51 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:16:51 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:16:51 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:21:44 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:21:44 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:21:44 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:21:44 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:21:44 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:21:44 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:21:44 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:31:35 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:31:35 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:31:35 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:31:35 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:31:35 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:31:35 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:31:35 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:31:48 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:31:48 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:31:48 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:31:48 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:31:48 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:31:48 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:31:48 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:26 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:26 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:27 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:27 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:27 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:27 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:27 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:31 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:31 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:31 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Tasks` (`id`,`title`,`done`,`created_at`,`updated_at`,`user_id`) VALUES (DEFAULT,'sgdhjmk,',false,'2019-01-08 21:35:31','2019-01-08 21:35:31',6);","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:31 +0000] \"POST /tasks HTTP/1.1\" 200 169\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:31 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:31 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:31 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:31 +0000] \"GET /tasks HTTP/1.1\" 200 205\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:42 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:42 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:42 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Tasks` (`id`,`title`,`done`,`created_at`,`updated_at`,`user_id`) VALUES (DEFAULT,'djfhkmgjl,kfjmhn',false,'2019-01-08 21:35:42','2019-01-08 21:35:42',6);","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:42 +0000] \"POST /tasks HTTP/1.1\" 200 177\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:42 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:42 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:42 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:42 +0000] \"GET /tasks HTTP/1.1\" 200 416\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:50 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:50 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:50 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Tasks` (`id`,`title`,`done`,`created_at`,`updated_at`,`user_id`) VALUES (DEFAULT,'dghndjmdh',false,'2019-01-08 21:35:50','2019-01-08 21:35:50',6);","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:50 +0000] \"POST /tasks HTTP/1.1\" 200 170\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:50 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:50 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:50 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:50 +0000] \"GET /tasks HTTP/1.1\" 200 620\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:54 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:54 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:54 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Tasks` (`id`,`title`,`done`,`created_at`,`updated_at`,`user_id`) VALUES (DEFAULT,'dgjmhmf',false,'2019-01-08 21:35:54','2019-01-08 21:35:54',6);","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:54 +0000] \"POST /tasks HTTP/1.1\" 200 168\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:54 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:54 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:54 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:54 +0000] \"GET /tasks HTTP/1.1\" 200 822\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:55 +0000] \"OPTIONS /user HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:55 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:35:55 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `email` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:35:55 +0000] \"GET /user HTTP/1.1\" 200 62\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:03 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:03 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:03 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:03 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:03 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:03 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:03 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:28 +0000] \"OPTIONS /tasks/3 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:28 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:28 GMT+0400 (Armenia Standard Time)] Executing (default): UPDATE `Tasks` SET `done`=true,`updated_at`='2019-01-08 21:36:28' WHERE `id` = '3' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:28 +0000] \"PUT /tasks/3 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:28 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:28 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:28 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:28 +0000] \"GET /tasks HTTP/1.1\" 200 821\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:29 +0000] \"OPTIONS /tasks/2 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:29 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:29 GMT+0400 (Armenia Standard Time)] Executing (default): UPDATE `Tasks` SET `done`=true,`updated_at`='2019-01-08 21:36:29' WHERE `id` = '2' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:29 +0000] \"PUT /tasks/2 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:29 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:29 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:29 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:29 +0000] \"GET /tasks HTTP/1.1\" 200 820\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:30 +0000] \"OPTIONS /tasks/1 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:30 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:30 GMT+0400 (Armenia Standard Time)] Executing (default): UPDATE `Tasks` SET `done`=true,`updated_at`='2019-01-08 21:36:30' WHERE `id` = '1' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:30 +0000] \"PUT /tasks/1 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:30 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:30 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:30 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:30 +0000] \"GET /tasks HTTP/1.1\" 200 819\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:34 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:34 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:34 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:34 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:35 +0000] \"OPTIONS /user HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:35 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:35 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `email` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:35 +0000] \"GET /user HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:38 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:38 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:38 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:38 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:45 +0000] \"OPTIONS /user HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:45 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:45 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `email` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:45 +0000] \"GET /user HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:50 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:50 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:50 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:50 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:50 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:50 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:50 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:53 +0000] \"OPTIONS /user HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:53 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:53 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `email` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:53 +0000] \"GET /user HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:55 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:55 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:56 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:56 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:56 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:36:56 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:36:56 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:37:01 +0000] \"OPTIONS /tasks/2 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:37:01 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:37:01 GMT+0400 (Armenia Standard Time)] Executing (default): UPDATE `Tasks` SET `done`=false,`updated_at`='2019-01-08 21:37:01' WHERE `id` = '2' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:37:01 +0000] \"PUT /tasks/2 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:37:01 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:37:01 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:37:01 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:37:01 +0000] \"GET /tasks HTTP/1.1\" 200 820\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:37:03 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:37:03 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:37:03 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:37:03 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:42:40 +0000] \"OPTIONS /tasks/1 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:42:40 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:42:40 GMT+0400 (Armenia Standard Time)] Executing (default): UPDATE `Tasks` SET `done`=false,`updated_at`='2019-01-08 21:42:40' WHERE `id` = '1' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:42:40 +0000] \"PUT /tasks/1 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:42:40 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:42:40 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:42:40 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:42:40 +0000] \"GET /tasks HTTP/1.1\" 200 821\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:42:47 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:42:47 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:42:47 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:42:47 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:46:46 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:46:46 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:46:46 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:46:46 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:46:46 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:46:46 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:46:46 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:49:21 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:49:21 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:49:21 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:49:21 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:49:21 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:49:21 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:49:21 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:52:03 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:52:03 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:52:03 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:52:03 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:52:03 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:52:03 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:52:03 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:53:02 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:53:02 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:53:02 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:53:02 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:53:02 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:53:02 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:53:02 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:54:24 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:54:24 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:54:24 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:54:24 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 01:54:24 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 01:54:24 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:21:54:24 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:01:09 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:01:09 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:01:09 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:01:09 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:01:09 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:01:09 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:01:09 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:02:28 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:02:28 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:02:28 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:02:28 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:02:28 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:02:28 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:02:28 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:02:32 +0000] \"OPTIONS /tasks/2 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:02:32 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:02:32 GMT+0400 (Armenia Standard Time)] Executing (default): UPDATE `Tasks` SET `done`=true,`updated_at`='2019-01-08 22:02:32' WHERE `id` = '2' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:02:32 +0000] \"PUT /tasks/2 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:02:32 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:02:32 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:02:32 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:02:32 +0000] \"GET /tasks HTTP/1.1\" 200 820\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:02:36 +0000] \"OPTIONS /tasks/1 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:02:36 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:02:36 GMT+0400 (Armenia Standard Time)] Executing (default): UPDATE `Tasks` SET `done`=true,`updated_at`='2019-01-08 22:02:36' WHERE `id` = '1' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:02:36 +0000] \"PUT /tasks/1 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:02:36 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:02:36 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:02:36 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:02:36 +0000] \"GET /tasks HTTP/1.1\" 200 819\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:06:11 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:06:11 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Users`","level":"info"}
+{"message":"[Wed Jan 09 2019 02:06:11 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT false, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:06:11 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Tasks`","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:06:21 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:06:21 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:06:21 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:06:21 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:06:21 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:06:21 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:06:21 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:07:10 +0000] \"OPTIONS /tasks/2 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:07:10 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:07:10 GMT+0400 (Armenia Standard Time)] Executing (default): UPDATE `Tasks` SET `done`=false,`updated_at`='2019-01-08 22:07:10' WHERE `id` = '2' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:07:10 +0000] \"PUT /tasks/2 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:07:10 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:07:10 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:07:10 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:07:10 +0000] \"GET /tasks HTTP/1.1\" 200 820\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:10:16 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:10:16 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Users`","level":"info"}
+{"message":"[Wed Jan 09 2019 02:10:16 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT false, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:10:16 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Tasks`","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:10:26 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:10:26 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:10:26 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:10:26 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:10:26 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:10:26 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:10:26 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:11:55 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:11:55 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Users`","level":"info"}
+{"message":"[Wed Jan 09 2019 02:11:55 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT false, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:11:55 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Tasks`","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:12:03 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:12:03 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:12:03 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:12:03 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:12:03 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:12:03 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:12:03 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:15:25 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER auto_increment , `name` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `salt` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:15:25 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Users`","level":"info"}
+{"message":"[Wed Jan 09 2019 02:15:25 GMT+0400 (Armenia Standard Time)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT false, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `user_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:15:25 GMT+0400 (Armenia Standard Time)] Executing (default): SHOW INDEX FROM `Tasks`","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:16:56 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:16:56 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:16:56 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:16:56 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:16:56 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:16:56 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:16:56 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:17:32 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:17:32 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:17:32 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:17:32 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:17:32 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:17:32 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:17:32 +0000] \"GET /tasks HTTP/1.1\" 200 820\n","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:17:43 +0000] \"OPTIONS /tasks/1 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:17:43 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:17:43 GMT+0400 (Armenia Standard Time)] Executing (default): DELETE FROM `Tasks` WHERE `id` = '1' AND `user_id` = 6","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:17:43 +0000] \"DELETE /tasks/1 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:20:29 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:20:29 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:20:29 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:20:29 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:20:29 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:20:29 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:20:29 +0000] \"GET /tasks HTTP/1.1\" 200 618\n","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:21:42 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:21:42 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:21:42 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:21:42 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:21:42 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:21:42 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::1 - - [08/Jan/2019:22:21:42 +0000] \"GET /tasks HTTP/1.1\" 200 618\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:22:06 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:22:06 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:22:06 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:22:06 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:22:06 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:22:06 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:22:06 +0000] \"GET /tasks HTTP/1.1\" 200 618\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:22:10 +0000] \"OPTIONS /tasks/2 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:22:10 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:22:10 GMT+0400 (Armenia Standard Time)] Executing (default): DELETE FROM `Tasks` WHERE `id` = '2' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:22:10 +0000] \"DELETE /tasks/2 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:26 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:26 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:26 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:26 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:26 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:26 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:26 +0000] \"GET /tasks HTTP/1.1\" 200 407\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:31 +0000] \"OPTIONS /tasks/4 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:31 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:31 GMT+0400 (Armenia Standard Time)] Executing (default): UPDATE `Tasks` SET `done`=true,`updated_at`='2019-01-08 22:23:31' WHERE `id` = '4' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:31 +0000] \"PUT /tasks/4 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:31 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:31 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:31 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:31 +0000] \"GET /tasks HTTP/1.1\" 200 406\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:32 +0000] \"OPTIONS /tasks/4 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:32 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:32 GMT+0400 (Armenia Standard Time)] Executing (default): UPDATE `Tasks` SET `done`=false,`updated_at`='2019-01-08 22:23:32' WHERE `id` = '4' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:32 +0000] \"PUT /tasks/4 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:32 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:32 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:32 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:32 +0000] \"GET /tasks HTTP/1.1\" 200 407\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:35 +0000] \"OPTIONS /tasks/4 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:35 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:35 GMT+0400 (Armenia Standard Time)] Executing (default): DELETE FROM `Tasks` WHERE `id` = '4' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:35 +0000] \"DELETE /tasks/4 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:37 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:37 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:23:37 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:23:37 +0000] \"GET /tasks HTTP/1.1\" 200 205\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:13 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:13 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:13 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:13 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:13 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:13 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:13 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:15 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:15 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:15 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:15 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:15 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:15 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:15 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:18 +0000] \"OPTIONS /tasks/3 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:18 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:18 GMT+0400 (Armenia Standard Time)] Executing (default): DELETE FROM `Tasks` WHERE `id` = '3' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:18 +0000] \"DELETE /tasks/3 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:18 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:18 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:18 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:18 +0000] \"GET /tasks HTTP/1.1\" 200 2\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:23 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:23 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:23 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Tasks` (`id`,`title`,`done`,`created_at`,`updated_at`,`user_id`) VALUES (DEFAULT,'fzbgfhxjhs',false,'2019-01-08 22:24:23','2019-01-08 22:24:23',6);","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:23 +0000] \"POST /tasks HTTP/1.1\" 200 171\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:23 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:23 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:23 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:23 +0000] \"GET /tasks HTTP/1.1\" 200 207\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:27 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:27 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:27 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Tasks` (`id`,`title`,`done`,`created_at`,`updated_at`,`user_id`) VALUES (DEFAULT,'sghndgjmdj',false,'2019-01-08 22:24:27','2019-01-08 22:24:27',6);","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:27 +0000] \"POST /tasks HTTP/1.1\" 200 171\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:27 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:27 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:27 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:27 +0000] \"GET /tasks HTTP/1.1\" 200 412\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:30 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:30 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:30 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Tasks` (`id`,`title`,`done`,`created_at`,`updated_at`,`user_id`) VALUES (DEFAULT,'fhkjgfjdgxbg',false,'2019-01-08 22:24:30','2019-01-08 22:24:30',6);","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:30 +0000] \"POST /tasks HTTP/1.1\" 200 173\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:31 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:31 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:31 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:31 +0000] \"GET /tasks HTTP/1.1\" 200 619\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:32 +0000] \"OPTIONS /tasks/6 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:32 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:32 GMT+0400 (Armenia Standard Time)] Executing (default): UPDATE `Tasks` SET `done`=true,`updated_at`='2019-01-08 22:24:32' WHERE `id` = '6' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:32 +0000] \"PUT /tasks/6 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:32 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:32 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:32 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:32 +0000] \"GET /tasks HTTP/1.1\" 200 618\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:35 +0000] \"OPTIONS /tasks/6 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:35 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:35 GMT+0400 (Armenia Standard Time)] Executing (default): DELETE FROM `Tasks` WHERE `id` = '6' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:35 +0000] \"DELETE /tasks/6 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:35 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:35 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:35 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:35 +0000] \"GET /tasks HTTP/1.1\" 200 414\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:37 +0000] \"OPTIONS /tasks/5 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:37 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:37 GMT+0400 (Armenia Standard Time)] Executing (default): DELETE FROM `Tasks` WHERE `id` = '5' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:37 +0000] \"DELETE /tasks/5 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:37 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:37 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:37 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:37 +0000] \"GET /tasks HTTP/1.1\" 200 209\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:40 +0000] \"OPTIONS /tasks/7 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:40 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:40 GMT+0400 (Armenia Standard Time)] Executing (default): DELETE FROM `Tasks` WHERE `id` = '7' AND `user_id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:40 +0000] \"DELETE /tasks/7 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:40 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:40 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:40 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:40 +0000] \"GET /tasks HTTP/1.1\" 200 2\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:47 +0000] \"OPTIONS /user HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:47 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:47 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `email` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:47 +0000] \"GET /user HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:50 +0000] \"OPTIONS /user HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:50 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 6;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:50 GMT+0400 (Armenia Standard Time)] Executing (default): DELETE FROM `Users` WHERE `id` = 6","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:50 +0000] \"DELETE /user HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:54 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:24:54 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:24:54 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:01 +0000] \"OPTIONS /users HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:01 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Users` (`id`,`name`,`password`,`email`,`salt`,`created_at`,`updated_at`) VALUES (DEFAULT,'re','$2b$10$nfCBYWsE1F4x99MMt85nBOsoYB4FpRTn3bjobR.lnDsUpJZ6UiqfC','re@gmail.com','$2b$10$nfCBYWsE1F4x99MMt85nBO','2019-01-08 22:25:01','2019-01-08 22:25:01');","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:01 +0000] \"POST /users HTTP/1.1\" 200 279\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:04 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:04 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:05 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:05 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:05 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 7;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:05 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 7;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:05 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:09 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:09 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 7;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:09 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Tasks` (`id`,`title`,`done`,`created_at`,`updated_at`,`user_id`) VALUES (DEFAULT,'fgxdhn',false,'2019-01-08 22:25:09','2019-01-08 22:25:09',7);","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:09 +0000] \"POST /tasks HTTP/1.1\" 200 167\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:09 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:09 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 7;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:09 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 7;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:09 +0000] \"GET /tasks HTTP/1.1\" 200 203\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:13 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:13 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 7;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:13 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Tasks` (`id`,`title`,`done`,`created_at`,`updated_at`,`user_id`) VALUES (DEFAULT,'dfhmkgjfjdgh',false,'2019-01-08 22:25:13','2019-01-08 22:25:13',7);","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:13 +0000] \"POST /tasks HTTP/1.1\" 200 173\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:13 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:13 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 7;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:13 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 7;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:13 +0000] \"GET /tasks HTTP/1.1\" 200 410\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:18 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:18 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 7;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:18 GMT+0400 (Armenia Standard Time)] Executing (default): INSERT INTO `Tasks` (`id`,`title`,`done`,`created_at`,`updated_at`,`user_id`) VALUES (DEFAULT,'shdgnjmdnh',false,'2019-01-08 22:25:18','2019-01-08 22:25:18',7);","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:18 +0000] \"POST /tasks HTTP/1.1\" 200 172\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:18 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:18 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 7;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:18 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 7;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:18 +0000] \"GET /tasks HTTP/1.1\" 200 616\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:24 +0000] \"OPTIONS /token HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:24 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 're@gmail.com';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:24 +0000] \"POST /token HTTP/1.1\" 200 111\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:24 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:24 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 7;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:24 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 7;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:24 +0000] \"GET /tasks HTTP/1.1\" 304 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:26 +0000] \"OPTIONS /tasks/8 HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:26 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 7;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:26 GMT+0400 (Armenia Standard Time)] Executing (default): DELETE FROM `Tasks` WHERE `id` = '8' AND `user_id` = 7","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:26 +0000] \"DELETE /tasks/8 HTTP/1.1\" 204 -\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:26 +0000] \"OPTIONS /tasks HTTP/1.1\" 204 0\n","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:26 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `name`, `password`, `email`, `salt`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`id` = 7;","level":"info"}
+{"message":"[Wed Jan 09 2019 02:25:26 GMT+0400 (Armenia Standard Time)] Executing (default): SELECT `id`, `title`, `done`, `created_at`, `updated_at`, `user_id` FROM `Tasks` AS `Tasks` WHERE `Tasks`.`user_id` = 7;","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [08/Jan/2019:22:25:26 +0000] \"GET /tasks HTTP/1.1\" 200 415\n","level":"info"}

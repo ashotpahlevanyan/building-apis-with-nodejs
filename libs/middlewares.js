@@ -22,7 +22,7 @@ module.exports = app => {
 	app.use(cors({
 		origin: ["http://localhost:3001"],
 		methods: ["GET", "POST", "PUT", "DELETE"],
-		allowedHeaders: ["Coontent-Type", "Authorization"]
+		allowedHeaders: ["Content-Type", "Authorization"]
 	}));
 	app.use(compression());
 	app.use(bodyParser.json());
