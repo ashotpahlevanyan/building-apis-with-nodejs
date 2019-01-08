@@ -3,7 +3,7 @@ module.exports = app => {
 
 	app.all("/user", app.auth.authenticate())
 		.get("/user", (req, res) => {
-			Users.findById(req.user.id, {
+			Users.findByPk(req.user.id, {
 				attributes: ["id", "name", "email"]
 			})
 				.then(result => res.json(result))

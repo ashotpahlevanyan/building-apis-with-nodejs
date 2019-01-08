@@ -37,18 +37,17 @@ module.exports = (sequelize, DataType) => {
 		}
   }, {
     classMethods: {
-      associate: (models) => {
-        Users.hasMany(models.Tasks);
-      },
-	    isPassword: (encodedPassword, password, salt) => {
-	    	//console.log(encodedPassword, password, salt);
-		    const testPassword = bcrypt.hashSync(password, salt);
-		    return testPassword === encodedPassword;
-	    }
+
     }
   });
-
-	Users.hook('beforeCreate', (user, options) => {
+	Users.associate = (models) => {
+		Users.hasMany(models.Tasks);
+	};
+	Users.isPassword = (encodedPassword, password, salt) => {
+		const testPassword = bcrypt.hashSync(password, salt);
+		return testPassword === encodedPassword;
+	};
+	Users.addHook('beforeCreate', (user, options) => {
 		const salt = bcrypt.genSaltSync();
 		user.password = bcrypt.hashSync(user.password, salt);
 		user.salt = salt;
