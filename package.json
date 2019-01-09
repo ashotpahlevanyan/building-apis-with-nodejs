@@ -4,10 +4,17 @@
   "description": "creating apis with node.js",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js",
+    "start": "npm run apidoc && babel-node index.js",
     "clusters": "babel-node clusters.js",
     "test": "NODE_ENV=test mocha test/**/*.js",
-    "clean": "rm -rf node_modules && npm install"
+    "clean": "rm -rf node_modules && npm install",
+    "apidoc": "apidoc -i routes/ -o public/apidoc"
+  },
+  "apidoc": {
+    "name": "Node Taslk API - Documentation",
+    "template": {
+      "forceLanguage": "en"
+    }
   },
   "keywords": [
     "node",
@@ -37,6 +44,7 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
+    "apidoc": "^0.17.7",
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",

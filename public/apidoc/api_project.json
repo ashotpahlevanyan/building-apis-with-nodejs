@@ -1,0 +1,1 @@
+{  "name": "Node Taslk API - Documentation",  "template": {    "forceLanguage": "en"  },  "version": "1.0.0",  "description": "creating apis with node.js",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2019-01-09T21:19:51.331Z",    "url": "http://apidocjs.com",    "version": "0.17.7"  }}
